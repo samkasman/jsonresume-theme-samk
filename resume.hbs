@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+
+	<title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
+
+	<style>
+	{{{css}}}
+	</style>
+
+	</head>
+	<body>
+
+	<div id="resume">
+		{{> basics }}
+		{{> skills }}
+		{{> work }}
+		{{> volunteer }}
+		{{> education }}
+		{{> awards }}
+		{{> publications }}
+		{{> languages }}
+		{{> interests }}
+		{{> references }}
+	</div>
+
+	<script>
+	// Detect URLs and wrap them in <a> tags
+	function urlify(text) {
+		var urlRegex = /(https?:\/\/[^\s]+)/g;
+		return text.replace(urlRegex, function (url) {
+			return '<a target="_blank" href="' + url + '">' + url + '</a>';
+		})
+	}
+
+	// Get elements that might contain URLs
+	const companySites = document.querySelectorAll('#work .website');
+	const clientSites = document.querySelectorAll('#work li');
+
+	// URLify any detected URLs within
+	companySites.forEach(el => { el.innerHTML = urlify(el.innerHTML); });
+	clientSites.forEach(el => { el.innerHTML = urlify(el.innerHTML); });
+	</script>
+
+	</body>
+</html>

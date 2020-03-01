@@ -1,0 +1,67 @@
+{{#resume.basics}}
+
+	<section id="header">
+		<div class="avatar">
+			<img srcset="{{picture}}">
+		</div>
+	</section>
+
+	<div class="meta">
+		<h1>{{name}}</h1>
+		<h2>💼 {{label}}</h2>
+	</div>
+
+	<section id="basics">
+		<div class="contact">
+		{{#if website}}
+		<div class="website">
+			<a target="_blank" href="{{website}}">{{website}}</a>
+		</div>
+		{{/if}}
+		{{#if email}}
+		<div class="email">
+			<strong class="network">
+				E-Mail:
+			</strong>
+			<br/>
+			<a href="mailto:{{email}}">{{email}}</a>
+		</div>
+		{{/if}}
+		{{#if phone}}
+		<div class="phone">
+			<strong class="network">
+				Phone:
+			</strong>
+			<br />
+			<a href="tel:{{phone}}">{{phone}}</a>
+		</div>
+		{{/if}}
+		{{#if profiles.length}}
+		<section id="profiles">
+			{{#each profiles}}
+			<div class="item">
+				{{#if network}}
+				<strong class="network">
+					{{network}}
+				</strong>
+				{{/if}}
+				{{#if username}}
+				<div class="username">
+					{{#if url}}<a target="_blank" href="{{url}}">{{/if}}
+						{{username}}
+					{{#if url}}</a>{{/if}}
+				</div>
+				{{/if}}
+			</div>
+			{{/each}}
+		</section>
+		{{/if}}
+		</div>
+		{{#if summary}}
+		<div class="summary">
+			<p><strong>About Me</strong></p>
+			<p>{{summary}}</p>
+		</div>
+		{{/if}}
+	</section>
+{{/resume.basics}}

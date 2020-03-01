@@ -1,0 +1,14 @@
+{
+  "name": "jsonresume-theme-samk",
+  "version": "1.0.0",
+  "description": "My custom JSON Resume theme",
+  "author": "Sam Kasman",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samkasman/jsonresume-theme-samk"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^2.0.0-alpha.4"
+  }
+}
