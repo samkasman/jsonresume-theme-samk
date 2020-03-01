@@ -28,6 +28,10 @@
 	</div>
 
 	<script>
+	// Get skill elements
+	const skillElements = document.querySelectorAll('#skills li');
+	skillElements.forEach(el => { el.outerHTML = '<li class="' + el.innerHTML + '">' + el.innerHTML + '</li>' });
+
 	// Detect URLs and wrap them in <a> tags
 	function urlify(text) {
 		var urlRegex = /(https?:\/\/[^\s]+)/g;
