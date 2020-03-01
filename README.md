@@ -1,8 +1,6 @@
 # jsonresume-theme-samk
 
-This is my custom [JSON Resume](http://jsonresume.org/) theme.
-
-Available for use via [npm](https://www.npmjs.com/package/jsonresume-theme-samk)
+This is my custom [JSON Resume](http://jsonresume.org/) theme, available for use via [npm](https://www.npmjs.com/package/jsonresume-theme-samk).
 
 If you're interested in customizing it, see below.
 
