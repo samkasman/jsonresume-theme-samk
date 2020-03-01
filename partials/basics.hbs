@@ -4,14 +4,14 @@
 		<div class="avatar">
 			<img srcset="{{picture}}">
 		</div>
+		<div class="meta">
+			<h1>{{name}}</h1>
+			<p>This resume was generated programatically by <code>code</code> on <span id="today"></span></p>
+		</div>
 	</section>
 
-	<div class="meta">
-		<h1>{{name}}</h1>
-		<h2>👨‍💻 {{label}}</h2>
-	</div>
-
 	<section id="basics">
+		<h2>👨‍💻 {{label}}</h2>
 		<div class="contact">
 		{{#if website}}
 		<div class="website">
@@ -63,3 +63,14 @@
 		{{/if}}
 	</section>
 {{/resume.basics}}
+
+<script>
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = yyyy + '-' + mm + '-' + dd;
+var todaysDate = document.getElementById("today");
+	todaysDate.innerHTML = today;
+</script>

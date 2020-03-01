@@ -3,7 +3,7 @@
 
 body {
 	/* background-image: linear-gradient(45deg, #141414 0%, #3984B8 100%); */
-	font-size: 14px;
+	font-size: 13px;
 	font-family: Helvetica, Arial, sans-serif;
 	line-height: 1.4;
 	padding: 15px;
@@ -15,6 +15,17 @@ body {
 	padding: 2rem 3rem;
 }
 
+#header {
+	padding: 0;
+	display: flex;
+	align-items: center;
+}
+
+#header h1,
+.avatar {
+	display: inline-block;
+}
+
 h1, h2, h3, h4 {
 	font-weight: bold;
 }
@@ -24,25 +35,21 @@ h1, h2, h3, h4, p {
 }
 
 h1 {
-	font-size: 2.2rem;
+	font-size: 2.0rem;
 	text-transform: uppercase;
 	font-family: 'Press Start 2P', sans-serif;
 }
 
 h2 {
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	border-bottom: 1px dashed #dedede !important;
-	padding-bottom: 8px;
-	margin-bottom: 8px;
+	padding-bottom: 4px;
+	margin-bottom: 1rem;
 	font-family: 'Permanent Marker', sans-serif;
 }
 
-h2:first-of-type {
-	padding-bottom: 24px;
-}
-
 h3 {
-	font-size: 1.6rem;
+	font-size: 1.25rem;
 	font-family: 'Permanent Marker', sans-serif;
 }
 h4 {
@@ -86,10 +93,6 @@ li {
 	margin: 0 0 4px;
 }
 
-.item {
-	padding: .6rem 0;
-}
-
 .city,
 .countryCode,
 .region,
@@ -110,22 +113,22 @@ li {
 	display: flex;
 }
 
+#skills ul {
+	margin-bottom: 0.5rem;
+}
+
 #skills li {
 	display: inline-block;
 	background-image: linear-gradient(45deg, #000 0%, #666 100%);
 	color: white;
 	padding: 2px 6px;
-	border-bottom: 4px solid silver !important;
+	border-bottom: 2px solid silver !important;
 }
 
 #skills .item {
 	display: inline-block;
 	width: 100%;
 	text-align: left;
-}
-
-#skills p {
-	margin-bottom: 0.5rem;
 }
 
 #skills .item:nth-of-type(1),
@@ -143,16 +146,11 @@ li {
 
 #skills .item:nth-of-type(5),
 #skills .item:nth-of-type(6) {
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 }
 
 #work .item {
-	padding: 1rem 0;
-	border-bottom: 1px dashed #dedede !important;
-}
-
-#work .item:last-of-type{
-	border: none;
+	padding: 0 0 .75rem;
 }
 
 #work .item ul {
@@ -167,7 +165,7 @@ li {
 #work .item:nth-of-type(2) li,
 #work .item:nth-of-type(3) li {
 	display: inline-block;
-	width: 25%;
+	width: 22%;
 }
 
 #work .date {
