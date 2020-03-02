@@ -2,6 +2,8 @@
 
 This is my custom [JSON Resume](http://jsonresume.org/) theme, available for use via [npm](https://www.npmjs.com/package/jsonresume-theme-samk).
 
+![Screenshot](https://github.com/samkasman/Resume/blob/master/screenshot.png)
+
 If you're interested in customizing it, see below.
 
 ## Getting started
