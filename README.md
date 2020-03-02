@@ -4,7 +4,7 @@ This is my custom [JSON Resume](http://jsonresume.org/) theme, available for use
 
 ![Screenshot](https://github.com/samkasman/Resume/blob/master/screenshot.png)
 
-View the exported `*pdf*` file [here](https://github.com/samkasman/Resume/blob/master/resume.pdf).
+View my exported `pdf` file [here](https://github.com/samkasman/Resume/blob/master/resume.pdf).
 
 If you're interested in customizing it, see below.
 
