@@ -118,4 +118,4 @@ When updating your theme, you'll need to change the version number and run `npm 
 
 ## License
 
-Available under [the MIT license](http://mths.be/mit).
+Available under [the MIT license](https://github.com/samkasman/jsonresume-theme-samk/blob/master/LICENSE).
