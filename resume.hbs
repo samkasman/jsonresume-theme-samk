@@ -2,14 +2,16 @@
 <html>
 	<head>
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
 
-	<title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
+		<title>{{#resume.basics}}{{name}}{{/resume.basics}}'s Resume</title>
 
-	<style>
-	{{{css}}}
-	</style>
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+		<style>
+		{{{css}}}
+		</style>
 
 	</head>
 	<body>
@@ -28,17 +30,50 @@
 	</div>
 
 	<script>
-	// Get skill elements
-	const skillElements = document.querySelectorAll('#skills li');
-	skillElements.forEach(el => { el.outerHTML = '<li class="' + el.innerHTML + '">' + el.innerHTML + '</li>' });
 
-	// Detect URLs and wrap them in <a> tags
-	function urlify(text) {
-		var urlRegex = /(https?:\/\/[^\s]+)/g;
-		return text.replace(urlRegex, function (url) {
-			return '<a target="_blank" href="' + url + '">' + url + '</a>';
-		})
-	}
+	// Get "basic info" elements, add FontAwesome icons
+	const contactInfo = document.querySelectorAll('.contact strong');
+	contactInfo.forEach(el => {
+		if (el.innerHTML.includes('E-Mail') ) {
+			el.innerHTML = '<i class="fa fa-envelope"></i>' + el.innerHTML;
+		}
+		if (el.innerHTML.includes('Phone')) {
+			el.innerHTML = '<i class="fa fa-phone"></i>' + el.innerHTML;
+		}
+		if (el.innerHTML.includes('Website')) {
+			el.innerHTML = '<i class="fa fa-globe"></i>' + el.innerHTML;
+		}
+		if (el.innerHTML.includes('GitHub')) {
+			el.innerHTML = '<i class="fa fa-github"></i>' + el.innerHTML;
+		}
+		if (el.innerHTML.includes('SoundCloud')) {
+			el.innerHTML = '<i class="fa fa-soundcloud"></i>' + el.innerHTML;
+		}
+		if (el.innerHTML.includes('Instagram')) {
+			el.innerHTML = '<i class="fa fa-instagram"></i>' + el.innerHTML;
+		}
+	});
+
+	// Get skill label elements, add FontAwesome icons
+	const skillLabel = document.querySelectorAll('#skills strong');
+	skillLabel.forEach(el => {
+		if (el.innerHTML.includes('Front-End') ) {
+			el.innerHTML = '<i class="fa fa-code"></i>' + el.innerHTML;
+		}
+		if (el.innerHTML.includes('Back-End')) {
+			el.innerHTML = '<i class="fa fa-code"></i>' + el.innerHTML;
+		}
+		if (el.innerHTML.includes('Local')) {
+			el.innerHTML = '<i class="fa fa-desktop"></i>' + el.innerHTML;
+		}
+		if (el.innerHTML.includes('Servers')) {
+			el.innerHTML = '<i class="fa fa-server"></i>' + el.innerHTML;
+		}
+	});
+
+	// Get skill elements, add their content as the <li>'s class
+	// const skillElements = document.querySelectorAll('#skills li');
+	// skillElements.forEach(el => { el.outerHTML = '<li class="' + el.innerHTML + '">' + el.innerHTML + '</li>' });
 
 	// Get elements that might contain URLs
 	const companySites = document.querySelectorAll('#work .website');
@@ -47,6 +82,14 @@
 	// URLify any detected URLs within
 	companySites.forEach(el => { el.innerHTML = urlify(el.innerHTML); });
 	clientSites.forEach(el => { el.innerHTML = urlify(el.innerHTML); });
+
+	// urlify - Detect URLs and wrap them in <a> tags
+	function urlify(text) {
+		var urlRegex = /(https?:\/\/[^\s]+)/g;
+		return text.replace(urlRegex, function (url) {
+			return '<a target="_blank" href="' + url + '">' + url + '</a>';
+		})
+	}
 	</script>
 
 	</body>

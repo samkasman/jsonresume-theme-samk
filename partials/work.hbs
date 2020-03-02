@@ -10,16 +10,12 @@
 		{{/if}}
 		{{#if position}}
 		<div class="position">
-			<strong>{{position}}</strong>
-		</div>
-		{{/if}}
-		{{#if website}}
-		<div class="website">
-			{{website}}
+			<i class="fa fa-id-card"></i> <strong>{{position}}</strong>
 		</div>
 		{{/if}}
 		<div class="date">
 			{{#if startDate}}
+			<i class="fa fa-calendar"></i>
 			<span class="startDate">
 				{{startDate}}
 			</span>
@@ -34,6 +30,11 @@
 			</span>
 			{{/if}}
 		</div>
+		{{#if website}}
+		<div class="website">
+			<i class="fa fa-desktop"></i> {{website}}
+		</div>
+		{{/if}}
 		{{#if summary}}
 		<div class="summary">
 			<p>{{summary}}</p>
