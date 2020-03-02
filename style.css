@@ -25,6 +25,11 @@ body {
 	display: inline-block;
 }
 
+.avatar img {
+	width: 74px;
+	height: auto;
+}
+
 h1, h2, h3, h4 {
 	font-weight: bold;
 }
@@ -146,7 +151,7 @@ li {
 
 #skills .item:nth-of-type(5),
 #skills .item:nth-of-type(6) {
-	margin-bottom: 1rem;
+	margin-bottom: .8rem;
 }
 
 #work .item {
