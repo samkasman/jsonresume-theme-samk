@@ -11,7 +11,21 @@
 	</section>
 
 	<section id="basics">
+
 		<h2>👨‍💻 {{label}}</h2>
+
+		{{#location}}
+		<div class="location">
+			<p>
+				<i class="fa fa-map-pin"></i>
+				<strong>Location:</strong><br />
+				{{#if city}}{{city}}{{/if}},
+				{{#if region}}{{region}}{{/if}},
+				{{#if countryCode}}{{countryCode}}{{/if}}
+			</p>
+		</div>
+		{{/location}}
+
 		<div class="contact">
 		{{#if website}}
 		<div class="website">
