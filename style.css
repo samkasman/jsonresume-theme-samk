@@ -43,7 +43,7 @@ h2 {
 	font-size: 1.5rem;
 	border-bottom: 1px dashed #dedede !important;
 	padding-bottom: 4px;
-	margin-bottom: 1rem;
+	margin-bottom: .75rem;
 	font-family: 'Permanent Marker', sans-serif;
 }
 
@@ -67,7 +67,7 @@ code {
 }
 
 section {
-	margin: 1rem 0;
+	margin: .65rem 0;
 }
 
 #header .avatar img {
